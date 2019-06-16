@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="css.css">
+  </head>
+      
+  <body>
+    <form novalidate class="narrow">
+      <input type="text"
+        id="username"
+        name="username"
+        pattern="[a-zA-Z ]{5,}"
+        placeholder="username"
+        maxlength="30"
+        required
+        class="form-control">
+
+      <div class="invalid">
+        The required username may only be a series of alphabetical characters.
+      </div>
+    
+      <input type="email"
+        id="email-text"
+        placeholder="email address"
+        required
+        class="form-control">
+
+        <div class="invalid">
+            Special characters are not allowed.
+        </div>
+      
+    </form>
+  </body>
+</html>

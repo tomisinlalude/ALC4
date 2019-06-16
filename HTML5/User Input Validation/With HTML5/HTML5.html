@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="css.css">
+  </head>
+      
+  <body>
+    <form novalidate class="narrow">
+      <h2 class="h3">Search</h2>
+      
+      <input type="search"
+        id="search-text"
+        class="form-control"
+        placeholder="search"
+        autofocus>
+    
+      <input type="text"
+        id="name-text"
+        placeholder="first and last name"
+        required
+        pattern="(.*)\s(.*)"
+        class="form-control">
+
+      <input type="text"
+        id="username"
+        name="username"
+        pattern="[a-zA-Z ]{5,}"
+        placeholder="username"
+        maxlength="30"
+        required
+        class="form-control">
+
+      <div class="invalid">
+        The required username may only be a series of alphabetical characters.
+      </div>
+    
+      <input type="email"
+        id="email-text"
+        placeholder="email address"
+        required
+        class="form-control">
+
+        <div class="invalid">
+            Special characters are not allowed.
+        </div>
+    
+      <input type="tel"
+        id="phone-text"
+        placeholder="phone number"
+        required
+        class="form-control">
+    
+      <input type="url"
+        id="phone-text"
+        placeholder="web address"
+        required
+        class="form-control">
+      
+      <h2 class="h3">Preferences</h2>
+    
+      <input type="number"
+        id="bedrooms-text"
+        placeholder="# of bedrooms"
+        min="1"
+        max="6"
+        class="form-control">
+      
+        <h3 class="h4">Days until available</h3>
+        <div>
+          <div class="col-sm-6">
+            <input type="range"
+              id="move-range"
+              min="0" max="120"
+              step="10" value="30">
+          </div>
+          <div class="col-sm-4">
+            <span id="move-value">30</span>
+          </div>
+        </div>
+    
+        <input type="text"
+          id="direction-list"
+          list="direction-data"
+          placeholder="directional preference"
+          class="form-control">
+    
+        <datalist id="direction-data">
+          <option value="North"></option>
+          <option value="South"></option>
+          <option value="East"></option>
+          <option value="West"></option>
+        </datalist>
+    
+        <input type="color"
+          id="main-color"
+          value="#ffffff"
+          class="form-control push-down-top">
+    
+        <h2 class="h3">Available Date</h2>
+    
+        <input type="month"
+          class="form-control"
+          value="2016-06">
+    
+        <input type="week"
+          class="form-control"
+          value="2016-W26">
+    
+        <input type="datetime-local"
+          class="form-control"
+          value="2016-06-26T09:30:00">
+    
+        <div  class="push-down-top">
+          <button class="btn btn-link">Cancel</button>
+          <input type="submit" class="btn btn-default" value="Save">
+        </div>
+      </form>
+  </body>
+</html>

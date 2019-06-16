@@ -1,0 +1,43 @@
+/**
+Using psuedo classes to validate user inputs
+**/
+
+input:required {
+  border-left: 4px solid #c33;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: #c33;
+  border-color: #c33;
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #c33;
+  box-shadow: 0 0 6px #fcc;
+    -webkit-box-shadow: 0 0 5px #fcc;
+      -moz-box-shadow: 0 0 6px #fcc;
+}
+
+input:valid + .invalid { /*Adjacent sibling selector*/
+  visibility: hidden;
+}
+
+input:invalid + .invalid {
+  visibility: visible;
+}
+
+input:required {
+  border-bottom: 2px solid #c33;
+}
+
+input:valid {
+  border-bottom: transparent;
+}
+
+.invalid {
+  color: #999;
+}
